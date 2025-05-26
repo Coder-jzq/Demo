@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Multimodal Fine-grained Context Interaction Graph Modeling for Conversational Speech Synthesis</title>
+		<link type="text/css" href="./css/basic.css" rel="stylesheet">
+		<link type="text/css" href="./css/index.css" rel="stylesheet">
+		<link type="text/css" href="./css/bootstrap.min.css" rel="stylesheet">
+		<script type='text/javascript' src="./js/jquery-3.3.1.min.js"></script>
+		<script type='text/javascript' src="./js/index.js"></script>
+		
+		
+		
+		
+		<style>
+		    .toggle-content {
+		      display: none; /* 默认隐藏内容 */
+		      margin-top: 10px;
+		    }
+		    .toggle-button {
+		      cursor: pointer;
+		      background-color: #007bff;
+		      color: white;
+		      border: none;
+		      padding: 5px 10px;
+		      border-radius: 3px;
+		      font-size: 14px;
+		    }
+		    .toggle-button:hover {
+		      background-color: #0056b3;
+		    }
+		    table {
+		      width: 100%;
+		      border-collapse: collapse;
+		      margin-top: 10px;
+		    }
+		    th, td {
+		      border: 1px solid #ccc;
+		      padding: 8px;
+		      text-align: center;
+		    }
+			
+			.emo-container {
+			    padding: 20px 2rem;
+			    font-family: 'Segoe UI', sans-serif;
+			    font-size: 13px;
+			    color: #333;
+				background: #f9f9f9;
+				margin-bottom: 2rem;
+				border-radius: 5px;
+			  }
+			
+			  .emo-title {
+			    font-weight: bold;
+				color: #2475cc;
+				font-size: 1.2rem;
+				padding: 0rem 2rem;
+				text-align: center;
+			  }
+			
+			  .emo-row {
+			    display: flex;
+			    flex-wrap: wrap;         /* ✅ 支持自动换行 */
+			    gap: 16px;
+			    justify-content: space-between;
+			  }
+			
+			  .emo-block {
+			    flex: 1 1 calc(14.28% - 16px); /* ✅ 自动等分：100/7=14.28%，减去间距 */
+			    min-width: 110px;             /* ✅ 防止太窄时压扁 */
+			    max-width: 200px;
+			    position: relative;
+			  }
+			
+			  .emo-label {
+			    text-align: center;
+			    margin-bottom: 6px;
+			    font-weight: 500;
+			  }
+			
+			  .emo-range-wrapper {
+			    position: relative;
+			    height: 36px;
+			    margin-bottom: 4px;
+			  }
+			
+			  .emo-range {
+			    -webkit-appearance: none;
+			    appearance: none;
+			    width: 100%;
+			    height: 6px;
+			    border-radius: 5px;
+			    background: #e0e0e0;
+			    outline: none;
+			    position: absolute;
+			    top: 20px;
+			    left: 0;
+			  }
+			
+			  .emo-range::-webkit-slider-thumb {
+			    -webkit-appearance: none;
+			    width: 14px;
+			    height: 14px;
+			    border-radius: 50%;
+			    background: #1e90ff;
+			    position: relative;
+			    z-index: 5;
+			  }
+			
+			  .emo-value-float {
+			    position: absolute;
+			    top: -2px;
+			    font-size: 12px;
+			    color: #1e90ff;
+			    font-weight: bold;
+			    transform: translateX(-50%);
+			    pointer-events: none;
+			    z-index: 10;
+			  }
+			
+			  .emo-side-values {
+			    display: flex;
+			    justify-content: space-between;
+			    font-variant-numeric: tabular-nums;
+			    font-size: 12px;
+			    color: #666;
+			  }
+		  </style>
+		  
+		  <script>
+		    // 通用表格展开/折叠功能
+		    function toggleTable(tableId) {
+		      const table = document.getElementById(tableId);
+		      const button = document.querySelector(`button[onclick="toggleTable('${tableId}')"]`);
+		      if (table.style.display === 'none' || table.style.display === '') {
+		        table.style.display = 'block';
+		        button.textContent = button.textContent.replace('Show', 'Hide');
+		      } else {
+		        table.style.display = 'none';
+		        button.textContent = button.textContent.replace('Hide', 'Show');
+		      }
+		    }
+		  </script>
+		
+	</head>
+	<body>
+		<div class="main">
+			<div class="title">
+				<img class="top-img" src="img/background.png" />
+				<span>Multimodal Fine-grained Context Interaction Graph Modeling for Conversational Speech Synthesis</span>
+			</div>
+			<div class="content">
+				<div class="section author">
+				</div>
+				<div class="section">
+					<div class="section-title">ABSTRACT</div>
+					<div class="section-content abstract">
+						xxx
+					</div>
+				</div>
+				
+				<div class="section">
+					<div class="section-title">MODEL ARCHITECTURE</div>
+					<div class="section-content model">
+						<img src="img/EMNLP-25-png.png" alt="" class="model-img">
+						
+						<p style="padding-top: 1rem; color: #a1a1a1; font-size: 1rem; text-align: center;">Figure: The overview of MFCIG-CSS consists of Multimodal Fine-grained Dialogue Semantic Interaction Graph, Multimodal Fine-grained Dialogue Prosody Interaction Graph, and Speech Synthesizer.</p>
+					</div>
+				</div>
+				
+				<div class="section">
+					<div class="section-title">EXPERIMENTS</div>
+					<div class="section-content experiments">
+						<!-- We develop four neural TTS systems for a  -->
+						<strong>Comparative Experiment:</strong>
+						</br> 1) <b>BaseCTTS</b> incorporates a coarse-grained context encoder to model sentence-level textual features of dialogue history, aiming to enhance the quality of the synthesized speech. <a href="https://ieeexplore.ieee.org/abstract/document/9383460" style="color: #1d5da4;">[PAPER]</a>
+						</br></br><strong>Ablation Experiment:</strong>
+						</br> <b>Abl.Exp.1: w/o xxx</b> xxx.
+					</div>
+					
+					<div class="section-title">DEmoxxxx</div>
+					<div class="third-title">DailyTalk</div>
+					<div class="section-content ">
+						<div class="subsection-exp-2">
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 1: </b>I've said that I've got a problem with the circus. I'm not kidding.</span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 85%;">0.89</div>
+								        <input type="range" class="emo-range" value="89" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 91%;">0.99</div>
+								        <input type="range" class="emo-range" value="99" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab1')">Show Conversation history 1</button>
+								<div id="tab1" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">I've said that I've got a problem with the circus. I'm not kidding.</td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/BaseCTTS/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/M2CTTS/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/CONCSS/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/MSRGCN/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/ECSS/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/IIICSS/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/Ours/9_0_d1402.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl1/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl2/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl3/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl4/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl5/9_0_d1402.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl6/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl7/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl8/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl9/9_0_d1402.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl10/9_0_d1402.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 2: </b>Well, women are the ones giving birth. I think it’s fair to give them more time, don’t you?</span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 93%;">1.00</div>
+								        <input type="range" class="emo-range" value="100" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 7%;">0.01</div>
+								        <input type="range" class="emo-range" value="2" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;">0.00</div>
+								        <input type="range" class="emo-range" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 93%;">1.00</div>
+								        <input type="range" class="emo-range" value="100" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab1')">Show Conversation history 1</button>
+								<div id="tab1" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">Well, women are the ones giving birth. I think it’s fair to give them more time, don’t you?</td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/BaseCTTS/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/M2CTTS/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/CONCSS/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/MSRGCN/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/ECSS/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/IIICSS/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/Ours/16_0_d410.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl1/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl2/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl3/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl4/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl5/16_0_d410.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl6/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl7/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl8/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl9/16_0_d410.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl10/16_0_d410.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+						</div>
+						<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
