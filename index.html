@@ -60,14 +60,14 @@
 			
 			  .emo-row {
 			    display: flex;
-			    flex-wrap: wrap;         /* ✅ 支持自动换行 */
+			    flex-wrap: wrap;     
 			    gap: 16px;
 			    justify-content: space-between;
 			  }
 			
 			  .emo-block {
-			    flex: 1 1 calc(14.28% - 16px); /* ✅ 自动等分：100/7=14.28%，减去间距 */
-			    min-width: 110px;             /* ✅ 防止太窄时压扁 */
+			    flex: 1 1 calc(14.28% - 16px); 
+			    min-width: 110px;           
 			    max-width: 200px;
 			    position: relative;
 			  }
@@ -84,7 +84,7 @@
 			    margin-bottom: 4px;
 			  }
 			
-			  .emo-range {
+			  .emo-range1 {
 			    -webkit-appearance: none;
 			    appearance: none;
 			    width: 100%;
@@ -97,16 +97,40 @@
 			    left: 0;
 			  }
 			
-			  .emo-range::-webkit-slider-thumb {
+			  .emo-range1::-webkit-slider-thumb {
 			    -webkit-appearance: none;
 			    width: 14px;
 			    height: 14px;
 			    border-radius: 50%;
 			    background: #1e90ff;
+				
 			    position: relative;
 			    z-index: 5;
 			  }
+			  
+			  .emo-range2 {
+			    -webkit-appearance: none;
+			    appearance: none;
+			    width: 100%;
+			    height: 6px;
+			    border-radius: 5px;
+			    background: #e0e0e0;
+			    outline: none;
+			    position: absolute;
+			    top: 20px;
+			    left: 0;
+			  }
 			
+			  .emo-range2::-webkit-slider-thumb {
+			    -webkit-appearance: none;
+			    width: 14px;
+			    height: 14px;
+			    border-radius: 50%;
+			    background: #909090;
+				
+			    position: relative;
+			    z-index: 5;
+			  }
 			  .emo-value-float {
 			    position: absolute;
 			    top: -2px;
@@ -195,8 +219,8 @@
 								    <div class="emo-block">
 								      <div class="emo-label">Happy</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
@@ -204,7 +228,7 @@
 								      <div class="emo-label">Sad</div>
 								      <div class="emo-range-wrapper">
 								        <div class="emo-value-float" style="left: 85%;">0.89</div>
-								        <input type="range" class="emo-range" value="89" disabled>
+								        <input type="range" class="emo-range1" value="89" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
@@ -212,39 +236,39 @@
 								      <div class="emo-label">Anger</div>
 								      <div class="emo-range-wrapper">
 								        <div class="emo-value-float" style="left: 91%;">0.99</div>
-								        <input type="range" class="emo-range" value="99" disabled>
+								        <input type="range" class="emo-range1" value="99" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Disgust</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Fear</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Surprise</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Neutral</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
@@ -398,19 +422,17 @@
 							<!-- 一句话分割 -->
 							
 							<!-- 一句话分割 -->
-							<div class="module-content">
+							<!-- <div class="module-content">
 								<span class="note"><b>Sample 2: </b>Well, women are the ones giving birth. I think it’s fair to give them more time, don’t you?</span>
 								
-								<!-- 情感 - s -->
 								<p class="emo-title">EmoDist</p>
 								<div class="emo-container">	
 								  <div class="emo-row">
-								    <!-- 一个块代表一个情感 -->
 								    <div class="emo-block">
 								      <div class="emo-label">Happy</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
@@ -418,39 +440,39 @@
 								      <div class="emo-label">Sad</div>
 								      <div class="emo-range-wrapper">
 								        <div class="emo-value-float" style="left: 93%;">1.00</div>
-								        <input type="range" class="emo-range" value="100" disabled>
+								        <input type="range" class="emo-range1" value="100" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Anger</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 7%;">0.01</div>
-								        <input type="range" class="emo-range" value="2" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090;">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Disgust</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Fear</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								    <div class="emo-block">
 								      <div class="emo-label">Surprise</div>
 								      <div class="emo-range-wrapper">
-								        <div class="emo-value-float" style="left: 5%;">0.00</div>
-								        <input type="range" class="emo-range" value="0" disabled>
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
@@ -458,16 +480,15 @@
 								      <div class="emo-label">Neutral</div>
 								      <div class="emo-range-wrapper">
 								        <div class="emo-value-float" style="left: 93%;">1.00</div>
-								        <input type="range" class="emo-range" value="100" disabled>
+								        <input type="range" class="emo-range1" value="100" disabled>
 								      </div>
 								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
 								    </div>
 								  </div>
 								</div>
-								<!-- 情感 - d -->
 								
-								<button class="toggle-button" onclick="toggleTable('tab1')">Show Conversation history 1</button>
-								<div id="tab1" class="toggle-content">
+								<button class="toggle-button" onclick="toggleTable('tab2')">Show Conversation history 1</button>
+								<div id="tab2" class="toggle-content">
 								
 									<table id="table_4">
 										<thead>
@@ -488,7 +509,6 @@
 												<td style="text-align: center">What type of music do you like to listen to?</td>
 												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
 											</tr>
-											<!-- ... -->
 										</tbody>
 									</table>
 								</div>
@@ -608,11 +628,1936 @@
 										</tr>
 									</tbody>
 								</table>
+							</div> -->
+							<!-- 一句话分割 -->
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 2: </b>I'd like to, but I have to meet my parents in an hour for dinner. How about tomorrow?</span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 93%;">0.98</div>
+								        <input type="range" class="emo-range1" value="99" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 90%;">0.96</div>
+								        <input type="range" class="emo-range1" value="96" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 93%;">1.00</div>
+								        <input type="range" class="emo-range1" value="100" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab2')">Show Conversation history 1</button>
+								<div id="tab2" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">I'd like to, but I have to meet my parents in an hour for dinner. How about tomorrow?</td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/BaseCTTS/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/M2CTTS/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/CONCSS/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/MSRGCN/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/ECSS/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/IIICSS/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/Ours/6_0_d789.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl1/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl2/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl3/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl4/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl5/6_0_d789.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl6/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl7/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl8/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl9/6_0_d789.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/abl10/6_0_d789.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 							<!-- 一句话分割 -->
 							
 						</div>
 						<hr />
+					</div>
+					
+					
+					<div class="third-title">NCSSD-EN</div>
+					<div class="section-content ">
+						<div class="subsection-exp-2">
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 1: </b>I can't help but feel a bit scared too. </span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 95%;">1.00</div>
+								        <input type="range" class="emo-range1" value="100" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 70%; ">0.73</div>
+								        <input type="range" class="emo-range1" value="73" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab3')">Show Conversation history 1</button>
+								<div id="tab3" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">I can't help but feel a bit scared too. </td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/BaseCTTS/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/M2CTTS/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/CONCSS/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/MSRGCN/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/ECSS/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/IIICSS/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/Ours/4_0_d447.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl1/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl2/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl3/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl4/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl5/4_0_d447.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl6/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl7/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl8/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl9/4_0_d447.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl10/4_0_d447.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+							<!-- 一句话分割 -->
+							<!-- <div class="module-content">
+								<span class="note"><b>Sample 2: </b>You're right. It's a constant fear for many people, especially those without health insurance on. </span>
+								
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 84%;">0.89</div>
+								        <input type="range" class="emo-range1" value="89" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 15%;">0.12</div>
+								        <input type="range" class="emo-range1" value="12" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								
+								<button class="toggle-button" onclick="toggleTable('tab5')">Show Conversation history 1</button>
+								<div id="tab5" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">You're right. It's a constant fear for many people, especially those without health insurance on. </td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/BaseCTTS/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/M2CTTS/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/CONCSS/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/MSRGCN/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/ECSS/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/IIICSS/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/Ours/5_4_d494.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl1/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl2/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl3/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl4/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl5/5_4_d494.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl6/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl7/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl8/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl9/5_4_d494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl10/5_4_d494.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div> -->
+							<!-- 一句话分割 -->
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 2: </b>I know, right? It's such a game changer. Our school is really keeping up with the latest technology trends in education. I'm so glad we have this resource now. </span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 88%;">0.92</div>
+								        <input type="range" class="emo-range1" value="92" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 74%;">0.78</div>
+								        <input type="range" class="emo-range1" value="78" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab4')">Show Conversation history 1</button>
+								<div id="tab4" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">I know, right? It's such a game changer. Our school is really keeping up with the latest technology trends in education. I'm so glad we have this resource now. </td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/BaseCTTS/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/M2CTTS/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/CONCSS/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/MSRGCN/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/ECSS/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/IIICSS/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/Ours/6_0_d47.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl1/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl2/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl3/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl4/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl5/6_0_d47.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl6/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl7/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl8/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl9/6_0_d47.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-en/abl10/6_0_d47.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+							
+						</div>
+						<hr />
+					</div>
+					
+					
+					
+					<div class="third-title">NCSSD-ZH</div>
+					<div class="section-content ">
+						<div class="subsection-exp-2">
+							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 1: </b>为什么生气呢？(Why are you angry?) </span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 39%;">0.39</div>
+								        <input type="range" class="emo-range1" value="39" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 94%;">1.00</div>
+								        <input type="range" class="emo-range1" value="100" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 58%">0.59</div>
+								        <input type="range" class="emo-range1" value="59" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;  color: #909090;">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab5')">Show Conversation history 1</button>
+								<div id="tab5" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">为什么生气呢？</td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/BaseCTTS/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/M2CTTS/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/CONCSS/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/MSRGCN/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/ECSS/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/IIICSS/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/Ours/2_0_d162.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl1/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl2/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl3/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl4/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl5/2_0_d162.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl6/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl7/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl8/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl9/2_0_d162.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl10/2_0_d162.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+												
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note"><b>Sample 2: </b>没错，这种款式我以前从来没见过，很有创意。(That's right, I've never seen this kind of style before. It's very creative.)</span>
+								
+								<!-- 情感 - s -->
+								<p class="emo-title">EmoDist</p>
+								<div class="emo-container">	
+								  <div class="emo-row">
+								    <!-- 一个块代表一个情感 -->
+								    <div class="emo-block">
+								      <div class="emo-label">Happy</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 93%;">0.99</div>
+								        <input type="range" class="emo-range1" value="99" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Sad</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Anger</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 4%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Disgust</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 4%; color: #909090; ">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Fear</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;  color: #909090;">0.00</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Surprise</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 35%; ">0.35</div>
+								        <input type="range" class="emo-range1" value="35" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								    <div class="emo-block">
+								      <div class="emo-label">Neutral</div>
+								      <div class="emo-range-wrapper">
+								        <div class="emo-value-float" style="left: 5%;  color: #909090;">0.99</div>
+								        <input type="range" class="emo-range2" value="0" disabled>
+								      </div>
+								      <div class="emo-side-values"><span>0.00</span><span>1.00</span></div>
+								    </div>
+								  </div>
+								</div>
+								<!-- 情感 - d -->
+								
+								<button class="toggle-button" onclick="toggleTable('tab6')">Show Conversation history 1</button>
+								<div id="tab6" class="toggle-content">
+								
+									<table id="table_4">
+										<thead>
+											<colgroup>
+											   <col width=10%></col>
+											   <col width=25%></col>
+											   <col width=20%></col>
+											</colgroup>
+											<tr>
+											  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+											  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="text-align: center">1<sup>th</sup></td>
+												<td style="text-align: center">What type of music do you like to listen to?</td>
+												<td style="text-align: center"><audio src="./audio/history/2394/0_0_d2394.wav" controls="" preload=""></audio></td>
+											</tr>
+											<!-- ... -->
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Comparative</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>BaseCTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M²-CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>CONCSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MSRGCN-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>I³-CSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">Ours</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">没错，这种款式我以前从来没见过，很有创意。</td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/BaseCTTS/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/M2CTTS/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/CONCSS/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/MSRGCN/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/ECSS/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/IIICSS/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/Ours/3_5_d1202.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ablation</strong></th>
+										</tr>
+									</thead>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.1</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.3</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.4</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.5</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl1/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl2/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl3/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl4/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl5/3_5_d1202.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.6</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.7</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.8</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.9</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Abl.Exp.10</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl6/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl7/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl8/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl9/3_5_d1202.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ncssd-zh/abl10/3_5_d1202.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
+												
+							
+						</div>
+						<hr />
+					</div>
+					
+					
+					
+					<div class="section">
+						<div class="section-title">单情感控制</div>
+							<div class="section-content model">
+								<div class="module-content">
+									
+									<!-- 一句话分割 -->
+									<span class="note"><b>Sample 1: </b>Hey, How's it going?</span>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										<div style="flex: 1;">
+										<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  <div style="width: 50%; background-color: #ffffff;">
+											<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+											  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Neutral (1.00)</div>
+											  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+											</div>
+										  </div>
+										  <!-- 修改这里：垂直居中 audio -->
+										  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+											<audio src="./audio/control/0_0_d204/自然0_0_d204.wav" controls preload></audio>
+										  </div>
+										</div>
+										</div>
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Happy (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <!-- 修改这里：垂直居中 audio -->
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/0_0_d204/开心0_0_d204.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Sad (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/0_0_d204/伤心0_0_d204.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Anger (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/0_0_d204/愤怒0_0_d204.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Disgust (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <!-- 修改这里：垂直居中 audio -->
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/0_0_d204/失落0_0_d204.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Fear (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/0_0_d204/害怕0_0_d204.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										 
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Surprise (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/0_0_d204/惊讶0_0_d204.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;"></div>
+										  <div style="flex: 1;"></div>
+									</div> 
+									<!-- 一句话分割 -->
+									
+									
+									
+									<!-- 一句话分割 -->
+									<span class="note"><b>Sample 2: </b>Beautifully done.</span>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										    <div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										      <div style="width: 50%; background-color: #ffffff;">
+										    	<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										    	  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Neutral (1.00)</div>
+										    	  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										    	</div>
+										      </div>
+										      <!-- 修改这里：垂直居中 audio -->
+										      <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										    	<audio src="./audio/control/7_1_d459/自然7_1_d459.wav" controls preload></audio>
+										      </div>
+										    </div>
+										  </div>
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Happy (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <!-- 修改这里：垂直居中 audio -->
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/7_1_d459/开心7_1_d459.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Sad (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/7_1_d459/伤心7_1_d459.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Anger (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/7_1_d459/愤怒7_1_d459.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Disgust (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <!-- 修改这里：垂直居中 audio -->
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/7_1_d459/失落7_1_d459.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Fear (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/7_1_d459/害怕7_1_d459.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Surprise (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/7_1_d459/惊讶7_1_d459.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;"></div>
+										  <div style="flex: 1;"></div>
+									</div> 
+									<!-- 一句话分割 -->
+									
+									
+									
+									<!-- 一句话分割 -->
+									<span class="note"><b>Sample 3: </b>I think we can go to the river, go around and have surfer.</span>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Neutral (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/2_0_d120/自然2_0_d120.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Happy (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <!-- 修改这里：垂直居中 audio -->
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/2_0_d120/开心2_0_d120.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Sad (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/2_0_d120/伤心2_0_d120.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Anger (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/2_0_d120/愤怒2_0_d120.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Disgust (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <!-- 修改这里：垂直居中 audio -->
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/2_0_d120/失落2_0_d120.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Fear (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/2_0_d120/害怕2_0_d120.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Surprise (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <!-- 修改这里：垂直居中 audio -->
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/2_0_d120/惊讶2_0_d120.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;"></div>
+										  <div style="flex: 1;"></div>
+									</div> 
+									<!-- 一句话分割 -->
+									
+									
+									<!-- 一句话分割 -->
+									<!-- <span class="note"><b>Sample 4: </b>It could be the battery. Let me Check it.</span>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Happy (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/6_1_d110/开心6_1_d110.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Sad (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/6_1_d110/伤心6_1_d110.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Anger (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/6_1_d110/愤怒6_1_d110.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Disgust (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/6_1_d110/失落6_1_d110.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Fear (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/6_1_d110/害怕6_1_d110.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+										  <div style="flex: 1;">
+										  	<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+										  	  <div style="width: 50%; background-color: #ffffff;">
+										  		<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+										  		  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Surprise (1.00)</div>
+										  		  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+										  		</div>
+										  	  </div>
+										  	  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+										  		<audio src="./audio/control/6_1_d110/惊讶6_1_d110.wav" controls preload></audio>
+										  	  </div>
+										  	</div>
+										  </div>
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 16px;">
+										  <div style="flex: 1;">
+											<div style="background: #f9fafb; border: 1px dashed #ddd; border-radius: 0.5rem; padding: 20px; box-sizing: border-box; display: flex; margin: 7px 0;">
+											  <div style="width: 50%; background-color: #ffffff;">
+												<div style="display: grid; background-color: #ffffff;padding: 0.3rem;">
+												  <div style="background: #e0f2fe; color: #0369a1; font-weight: bold; padding: 6px; border-radius: 6px;">Neutral (1.00)</div>
+												  <div style="background: #f3f4f6; color: #6b7280; padding: 6px; border-radius: 6px; margin-top: 0.3rem;">Other (0.00)</div>
+												</div>
+											  </div>
+											  <div style="width: 50%; display: flex; align-items: center; justify-content: center; padding-left: 3%;">
+												<audio src="./audio/control/6_1_d110/自然6_1_d110.wav" controls preload></audio>
+											  </div>
+											</div>
+										  </div>
+										  <div style="flex: 1;"></div>
+										  <div style="flex: 1;"></div>
+									</div> -->
+									<!-- 一句话分割 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="section">
+						<div class="section-title">混合情感控制</div>
+							<div class="section-content model">
+								<div class="module-content">
+									<!-- 单句话分割 -->
+									<span class="note"><b>Sample 1: </b>Then just press the black button all the way down.</span>
+									<div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; display: flex; flex-wrap: wrap; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-family: sans-serif;">
+									  <div style="flex: 1 1 75%; padding-right: 16px;">
+									    <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 10px;">
+									      
+										  <div style="display: flex; align-items: center; gap: 10px;">
+										    <div style="width: 80px;">Neutral</div>
+										    <div style="flex: 1; background: #f4f4f5; border-radius: 8px; overflow: hidden; height: 16px;">
+										      <div style="width: 0%; background: #b0b4ba; height: 100%;"></div>
+										    </div>
+										    <div style="width: 40px; text-align: right;">0.00</div>
+										  </div>
+										  
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;  color: #374151; font-weight: bold;">Happy</div>
+									        <div style="flex: 1; background: #f5f7f5; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 50%; background: #9bc9b5; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right; color: #374151; font-weight: bold;">0.50</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;">Sad</div>
+									        <div style="flex: 1; background: #f5f7fa; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #a3b9d2; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;">Anger</div>
+									        <div style="flex: 1; background: #fdf5f4; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #d9a3a0; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px; ">Disgust</div>
+									        <div style="flex: 1; background: #f6f8f5; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #b4c8a7; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;">Fear</div>
+									        <div style="flex: 1; background: #fcf8f2; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #d8ba96; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px; font-weight: bold;">Surprise</div>
+									        <div style="flex: 1; background: #f8f7fc; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 50%; background: #c2b6e1; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right; font-weight: bold;">0.50</div>
+									      </div>
+									    
+									      
+									    
+									    </div>
+																	
+									  </div>
+									
+									  <div style="flex: 1 1 25%; margin: auto;">
+										<div style="width: 100%;">
+											<div style="text-align: center;">源语音</div>
+											<audio src="./audio/emodist/4_1_d110.wav" controls style="width: 100%;"></audio>
+										</div>
+										<div style="width: 100%;">
+											<div style="text-align: center;">控制情感的语音</div>
+											<audio src="./audio/emodist/开心-惊讶554_1_d110.wav" controls style="width: 100%;"></audio>
+										</div>
+									  </div>
+									</div>
+									<!-- 单句话分割 --> 
+									
+									<!-- 单句话分割 -->
+									<span class="note"><b>Sample 3: </b>I’ve got a new boss.</span>
+									<div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; display: flex; flex-wrap: wrap; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-family: sans-serif;">
+									  <div style="flex: 1 1 75%; padding-right: 16px;">
+									    <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 10px;">
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;">Neutral</div>
+									        <div style="flex: 1; background: #f4f4f5; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #b0b4ba; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+										  
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;  color: #374151;">Happy</div>
+									        <div style="flex: 1; background: #f5f7f5; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #9bc9b5; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right; color: #374151;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;">Sad</div>
+									        <div style="flex: 1; background: #f5f7fa; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #a3b9d2; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px; font-weight: bold;">Anger</div>
+									        <div style="flex: 1; background: #fdf5f4; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 30%; background: #d9a3a0; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right; font-weight: bold;">0.30</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px; ">Disgust</div>
+									        <div style="flex: 1; background: #f6f8f5; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #b4c8a7; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px; font-weight: bold;">Fear</div>
+									        <div style="flex: 1; background: #fcf8f2; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 70%; background: #d8ba96; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right; font-weight: bold;">0.70</div>
+									      </div>
+									    
+									      <div style="display: flex; align-items: center; gap: 10px;">
+									        <div style="width: 80px;">Surprise</div>
+									        <div style="flex: 1; background: #f8f7fc; border-radius: 8px; overflow: hidden; height: 16px;">
+									          <div style="width: 0%; background: #c2b6e1; height: 100%;"></div>
+									        </div>
+									        <div style="width: 40px; text-align: right;">0.00</div>
+									      </div>
+									    
+									      
+									    
+									    </div>
+								
+									  </div>
+									  <div style="flex: 1 1 25%; margin: auto;">
+									    <div style="width: 100%;">
+									    	<div style="text-align: center;">源语音</div>
+									    	<audio src="./audio/emodist/0_0_d133.wav" controls style="width: 100%;"></audio>
+									    </div>
+									    <div style="width: 100%;">
+									    	<div style="text-align: center;">控制情感的语音</div>
+									  		<audio src="./audio/emodist/愤怒-害怕37-0_0_d133.wav" controls style="width: 100%;"></audio>
+									  	</div>
+									  </div>
+									</div>
+									<!-- 单句话分割 --> 
+									
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
